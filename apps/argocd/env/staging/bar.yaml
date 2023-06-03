@@ -17,7 +17,6 @@ spec:
     helm:
       valueFiles:
         - staging-values.yaml
-  sources: []
   project: default
   syncPolicy:
     automated:
