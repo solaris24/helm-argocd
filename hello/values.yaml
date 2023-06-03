@@ -8,7 +8,7 @@ image:
   repository: registry.gitlab.com/quickbooks2018/kaniko
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "33"
+  tag: "8"
 
 imagePullSecrets:
 - name: gitlab-image-pull-access
