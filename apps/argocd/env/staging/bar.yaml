@@ -11,7 +11,7 @@ spec:
     namespace: bar
     server: 'https://kubernetes.default.svc'
   source:
-    path: ../../../charts/bar
+    path: apps/charts/bar
     repoURL: 'https://gitlab.com/quickbooks2018/helm-argocd.git'
     targetRevision: HEAD
     helm:
