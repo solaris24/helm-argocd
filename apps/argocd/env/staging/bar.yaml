@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: bar
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    name: ''
+    namespace: bar
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: ../../../charts/bar
+    repoURL: 'https://gitlab.com/quickbooks2018/helm-argocd.git'
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
+  sources: []
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - PrunePropagationPolicy=foreground
+      - PruneLast=true
