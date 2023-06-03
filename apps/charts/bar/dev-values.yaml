@@ -16,7 +16,7 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles:
-        - staging-values.yaml
+        - values.yaml
   sources: []
   project: default
   syncPolicy:
