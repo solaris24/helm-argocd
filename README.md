@@ -38,6 +38,7 @@ helm repo add argo https://argoproj.github.io/argo-helm
 helm repo update
 helm repo ls
 helm search repo argocd
+helm search repo argo/argo-cd -l
 helm show values argo/argo-cd --version 3.35.4
 mkdir -p argocd/values
 helm show values argo/argo-cd --version 3.35.4 > argocd/values/argocd.yaml
@@ -50,6 +51,7 @@ helm repo add argo https://argoproj.github.io/argo-helm
 helm repo update
 helm repo ls
 helm search repo argocd
+helm search repo argo/argocd-image-updater -l
 helm show values argo/argocd-image-updater --version 0.8.5
 mkdir -p argocd/values
 helm show values argo/argocd-image-updater --version > argocd/values/argocd-image-updater.yaml
