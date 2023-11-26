@@ -43,6 +43,7 @@ helm show values argo/argo-cd --version 3.35.4
 mkdir -p argocd/values
 helm show values argo/argo-cd --version 3.35.4 > argocd/values/argocd.yaml
 helm install argocd -n argocd --create-namespace argo/argo-cd --version 3.35.4 -f argocd/values/argocd.yaml
+helm upgrade --install argocd -n argocd --create-namespace argo/argo-cd --version 5.51.4 --wait
 ```
 - Helm Image Updater
 
