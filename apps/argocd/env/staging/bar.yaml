@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     name: ''
-    namespace: bar
+    namespace: staging-bar
     server: 'https://kubernetes.default.svc'
   source:
     path: apps/charts/bar
